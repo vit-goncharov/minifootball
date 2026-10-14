@@ -1,0 +1,211 @@
+<!doctype html><html lang=ru><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Вечер 18 сентября 2026</title><style>
+@view-transition { navigation: auto; }
+:root {
+  --bg:#070d20; --panel:rgba(17,32,74,.55); --line:rgba(140,172,235,.16);
+  --ink:#eaf0fb; --dim:#8ea4cd; --faint:#5f739c; --up:#5fe0a0; --down:#ff8e8e;
+  --gold:#e8c358; --silver:#cfd8e3; --bronze:#cf8a4b;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 -apple-system,
+  "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing:antialiased; }
+body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:radial-gradient(900px 500px at 20% -10%, rgba(63,127,255,.16), transparent 70%),
+             radial-gradient(700px 420px at 90% 0%, rgba(232,87,159,.10), transparent 70%); }
+img { max-width:100%; }
+.wrap { position:relative; z-index:1; overflow-x:clip; max-width:1040px; margin:0 auto; padding:0 18px 72px; }
+a { color:inherit; text-decoration:none; }
+header.top { display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+  padding:26px 0 20px; border-bottom:1px solid var(--line); margin-bottom:28px; }
+header.top .logo { font-size:19px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; }
+header.top nav { display:flex; gap:20px; margin-left:auto; flex-wrap:wrap; }
+header.top nav a { font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--dim); padding:4px 0; border-bottom:2px solid transparent; }
+header.top nav a:hover, header.top nav a.on { color:var(--ink); border-color:var(--ink); }
+h1 { font-size:30px; font-weight:800; letter-spacing:.02em; margin:0 0 6px; }
+h2 { font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--dim);
+  margin:0 0 14px; font-weight:700; }
+.sub { color:var(--dim); font-size:14px; margin:0 0 26px; }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+  padding:18px 20px; margin-bottom:18px; }
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+@media (max-width:760px) { .cols { grid-template-columns:1fr; } }
+table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+th { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint);
+  font-weight:600; text-align:right; padding:0 0 10px; }
+th.l, td.l { text-align:left; }
+td { padding:9px 0; border-top:1px solid var(--line); text-align:right; font-size:15px; }
+th + th, td + td { padding-left:18px; }
+tr:first-child td { border-top:0; }
+.tname { font-weight:700; letter-spacing:.05em; text-transform:uppercase; font-size:14px; }
+.dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:9px;
+  vertical-align:middle; }
+.pts { font-weight:800; font-size:17px; }
+.av { width:34px; height:34px; border-radius:7px; flex:none; object-fit:cover;
+  image-rendering:pixelated; background:rgba(140,172,235,.12); }
+.row { display:flex; align-items:center; gap:12px; padding:9px 0;
+  border-top:1px solid var(--line); }
+.row:first-of-type { border-top:0; }
+.row .nm { flex:1; min-width:0; overflow-wrap:anywhere; }
+.row .n { width:34px; text-align:right; font-variant-numeric:tabular-nums; }
+.row .n.d { color:var(--faint); }
+.bar { flex:2; height:8px; border-radius:5px; background:rgba(140,172,235,.10);
+  overflow:hidden; display:flex; min-width:60px; }
+.bar i { height:100%; }
+.bar i.a { opacity:.42; }
+.facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:14px; }
+.fact span { display:block; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--faint); margin-bottom:5px; }
+.fact b { font-size:23px; font-weight:800; font-variant-numeric:tabular-nums; }
+.kpi { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; }
+.kpi .big { grid-column:span 1; background:rgba(140,172,235,.06); border:1px solid var(--line);
+  border-radius:10px; padding:16px 18px; }
+.kpi .big .hd { display:flex; align-items:center; gap:8px; font-size:10px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--faint); }
+.kpi .big .val { font-size:38px; font-weight:800; line-height:1.05; margin-top:10px;
+  font-variant-numeric:tabular-nums; }
+.kpi .big .val small { font-size:15px; font-weight:700; color:var(--dim);
+  margin-left:7px; letter-spacing:.04em; }
+.kpi .big.gold { border-color:rgba(255,200,61,.34); background:rgba(255,200,61,.07); }
+.kpi .big.gold .val, .kpi .big.gold .hd { color:#ffc83d; }
+.kpi .big.blue .val { color:#7fb3ff; }
+.kpi .big.green .val { color:#5fe0a0; }
+.stat2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (max-width:560px) { .stat2 { grid-template-columns:1fr; } }
+.stat2 .big { display:flex; align-items:center; gap:16px; }
+.stat2 .big .ic { flex:none; opacity:.75; }
+.stat2 .big .tx { min-width:0; }
+.stat2 .big .val { font-size:34px; margin-top:0; }
+.stat2 .big .hd { margin-top:4px; }
+.minis { display:grid; grid-template-columns:repeat(auto-fit,minmax(104px,1fr)); gap:12px;
+  margin-top:14px; }
+.mini { display:flex; align-items:center; gap:9px; color:var(--dim); font-size:13px; }
+.mini b { color:var(--ink); font-size:16px; font-weight:800;
+  font-variant-numeric:tabular-nums; }
+.mv { display:flex; justify-content:space-between; align-items:baseline; padding:8px 0;
+  border-top:1px solid var(--line); }
+.mv:first-of-type { border-top:0; }
+.mv b { font-variant-numeric:tabular-nums; }
+.mv i { font-style:normal; font-weight:700; margin-left:10px; }
+.up { color:var(--up); } .down { color:var(--down); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px; }
+.card { display:block; background:var(--panel); border:1px solid var(--line);
+  border-radius:10px; padding:14px; text-align:center; transition:border-color .15s; }
+.card:hover { border-color:rgba(140,172,235,.4); }
+.card img { width:74px; height:74px; border-radius:10px; image-rendering:pixelated;
+  background:rgba(140,172,235,.12); }
+.card .nm { margin-top:10px; font-weight:700; font-size:14px; letter-spacing:.04em; }
+.card .meta { color:var(--faint); font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase; margin-top:5px; }
+.tier { display:inline-block; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+  padding:2px 8px; border-radius:20px; margin-top:7px; }
+.tier.gold { color:#201803; background:var(--gold); }
+.tier.silver { color:#15191f; background:var(--silver); }
+.tier.bronze { color:#1b0e04; background:var(--bronze); }
+.hero { display:flex; gap:20px; align-items:center; margin-bottom:24px; flex-wrap:wrap; }
+.hero img { width:96px; height:96px; border-radius:14px; image-rendering:pixelated;
+  background:rgba(140,172,235,.12); }
+.log { display:grid; grid-template-columns:1fr 1fr; gap:0 26px; }
+@media (max-width:620px) { .log { grid-template-columns:1fr; } }
+.lg { display:flex; align-items:center; gap:10px; padding:6px 0; font-size:13px;
+  border-top:1px solid var(--line); }
+.lg .i { width:20px; color:var(--faint); font-size:11px; }
+.lg .t { flex:1; letter-spacing:.04em; text-transform:uppercase; font-size:12px; }
+.lg .t.r { text-align:right; }
+.lg .s { font-variant-numeric:tabular-nums; font-weight:700; }
+.lg .w { font-weight:800; }
+.note { color:var(--faint); font-size:12px; margin-top:12px; }
+.pills { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+.pill { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim);
+  border:1px solid var(--line); border-radius:20px; padding:4px 11px; }
+footer { color:var(--faint); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  padding:30px 0 0; border-top:1px solid var(--line); margin-top:34px;
+  display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+.spark { display:flex; align-items:flex-end; gap:3px; height:38px; margin-top:10px; }
+.cardart { width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:7px;
+  display:block; box-shadow:0 6px 22px rgba(0,0,0,.45); }
+.blank { width:100%; aspect-ratio:2/3; border-radius:7px; display:flex;
+  align-items:center; justify-content:center; border:1px dashed rgba(140,172,235,.26);
+  background:rgba(140,172,235,.04); color:var(--faint); font-size:20px; font-weight:800; }
+.stem { position:relative; padding-left:28px; }
+.stem::before { content:""; position:absolute; left:9px; top:6px; bottom:6px; width:2px;
+  background:linear-gradient(180deg, var(--gold), rgba(140,172,235,.18)); border-radius:2px; }
+.leaf { position:relative; display:grid; grid-template-columns:96px 1fr;
+  gap:18px; align-items:center; padding:12px 0; }
+.leaf::before { content:""; position:absolute; left:-23px; top:50%; width:16px; height:2px;
+  background:rgba(140,172,235,.3); }
+.leaf::after { content:""; position:absolute; left:-27px; top:50%; width:9px; height:9px;
+  margin-top:-4px; border-radius:50%; background:var(--bg);
+  border:2px solid rgba(140,172,235,.38); }
+.leaf.on::after { border-color:var(--gold); background:var(--gold); }
+.leaf .who { font-weight:700; letter-spacing:.04em; }
+.leaf .meta { color:var(--faint); font-size:11px; letter-spacing:.12em;
+  text-transform:uppercase; margin-top:5px; }
+.hero img { width:96px; height:96px; }
+.cardwrap { display:grid; grid-template-columns:210px 1fr; gap:24px; align-items:start; }
+@media (max-width:620px) { .cardwrap { grid-template-columns:1fr; } }
+.cardwrap .cardart { width:100%; height:auto; aspect-ratio:auto; object-fit:contain; }
+.caps { margin:0; padding:0; list-style:none; }
+.caps li { padding:7px 0 7px 22px; position:relative; font-size:15px;
+  border-top:1px solid var(--line); }
+.caps li:first-child { border-top:0; }
+.caps li::before { position:absolute; left:0; font-weight:800; }
+.caps li.p::before { content:"+"; color:var(--up); }
+.caps li.m::before { content:"−"; color:var(--down); }
+.scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:0 -4px; padding:0 4px; }
+.row .sub2 { color:var(--dim); font-size:13px; white-space:nowrap; }
+@media (max-width:560px) {
+  .wrap { padding:0 13px 56px; }
+  header.top { padding:18px 0 14px; gap:10px; margin-bottom:20px; }
+  header.top .logo { font-size:15px; letter-spacing:.16em; }
+  header.top nav { width:100%; margin-left:0; gap:13px; }
+  header.top nav a { font-size:11px; letter-spacing:.08em; }
+  h1 { font-size:24px; }
+  .sub { font-size:13px; margin-bottom:18px; }
+  .panel { padding:14px 14px 16px; }
+  .row { flex-wrap:wrap; gap:10px; }
+  .row .nm { flex:1 1 auto; min-width:0; white-space:normal;
+    overflow:visible; text-overflow:clip; }
+  .mv { flex-wrap:wrap; gap:4px 10px; }
+  .row .sub2 { flex:1 0 100%; padding-left:46px; white-space:normal; font-size:12px; }
+  .leaf { grid-template-columns:72px 1fr; gap:14px; }
+  .fact b { font-size:19px; }
+  table { font-size:13px; }
+  .hide-sm { display:none; }
+  .hero img { width:72px; height:72px; }
+  .cardwrap { grid-template-columns:1fr; }
+  .cardwrap .cardart { max-width:230px; }
+}
+.chart { display:flex; align-items:stretch; gap:6px; height:120px; margin-top:4px; }
+.chart .col { flex:1; display:flex; flex-direction:column; justify-content:flex-end;
+  gap:2px; min-width:0; }
+.chart .g { background:#5b9bff; border-radius:3px 3px 0 0; }
+.chart .a { background:rgba(47,208,138,.75); border-radius:3px 3px 0 0; }
+.chart .zero { height:2px; background:rgba(140,172,235,.18); border-radius:2px; }
+.xaxis { display:flex; gap:6px; margin-top:8px; }
+.xaxis span { flex:1; text-align:center; font-size:10px; color:var(--faint);
+  letter-spacing:.06em; min-width:0; overflow:hidden; }
+.legend { display:flex; gap:16px; margin-top:12px; font-size:11px; color:var(--dim);
+  letter-spacing:.1em; text-transform:uppercase; }
+.legend i { display:inline-block; width:10px; height:10px; border-radius:3px;
+  margin-right:6px; vertical-align:-1px; }
+.badges { display:flex; flex-wrap:wrap; gap:10px; }
+.badge { display:flex; align-items:center; gap:9px; border:1px solid var(--line);
+  border-radius:10px; padding:9px 13px; background:rgba(140,172,235,.05); }
+.badge b { font-size:17px; font-weight:800; }
+.badge .ic { flex:none; opacity:.9; }
+.ic { vertical-align:-3px; }
+.line { position:relative; height:150px; margin-top:6px; }
+.line { height:auto; }
+.line svg { width:100%; height:auto; overflow:visible; display:block; }
+.line .grid line { stroke:rgba(140,172,235,.12); stroke-width:1; }
+.line .dot { fill:var(--bg); stroke-width:2.5; }
+.line .ax { fill:var(--faint); font-size:10px; text-anchor:end; }
+.line .vl { font-size:11px; font-weight:700; text-anchor:middle; }
+.badge span { font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--dim); }
+.badge.star { border-color:rgba(232,195,88,.42); background:rgba(232,195,88,.08); }
+.badge.star b { color:var(--gold); }
+.spark i { flex:1; max-width:46px; background:rgba(140,172,235,.3);
+  border-radius:2px 2px 0 0; min-height:2px; }
+.spark i.last { background:var(--up); }
+</style><body><div class=wrap><header class=top><a class=logo href='../index.html'>Минифутбол</a><nav><a href="../index.html">главная</a><a href="../season.html">сезон</a><a href="../evenings.html" class="on">вечера</a><a href="../players.html">игроки</a><a href="../cards.html">карточки</a><a href="../transfers.html">трансферы</a></nav></header><h1>18 сентября 2026</h1><p class="sub">16 матчей · 32 гола · 22 паса</p><div class="panel"><h2>таблица</h2><div class="scroll"><table><tr><th class="l">команда</th><th>и</th><th>в</th><th>н</th><th>п</th><th>голы</th><th>очки</th></tr><tr><td class="l"><span class="tname" style="color:#2fd08a"><i class="dot" style="background:#2fd08a"></i>Зелёная</span></td><td>13</td><td>10</td><td>2</td><td>1</td><td>21:6</td><td class="pts" style="color:#2fd08a">32</td></tr><tr><td class="l"><span class="tname" style="color:#ff6fb3"><i class="dot" style="background:#ff6fb3"></i>Розовая</span></td><td>9</td><td>3</td><td>1</td><td>5</td><td>6:9</td><td class="pts" style="color:#ff6fb3">10</td></tr><tr><td class="l"><span class="tname" style="color:#5b9bff"><i class="dot" style="background:#5b9bff"></i>Синяя</span></td><td>10</td><td>1</td><td>1</td><td>8</td><td>5:17</td><td class="pts" style="color:#5b9bff">4</td></tr></table></div></div><div class="panel"><h2>составы</h2><img src="../assets/pitch/2026-09-18.jpg" alt="" style="width:100%;border-radius:8px;display:block"></div><div class="panel"><h2>сборная вечера · по мнению ИИ</h2><div class="grid"><a class="card" href="../players/igor-d.html"><img class="" src="../assets/av/igor-d.png" alt=""><div class="nm" style="color:#2fd08a">Игорь Д</div><div class="meta">ВР · 0.46 за матч</div></a><a class="card" href="../players/dmitriy-z.html"><img class="" src="../assets/av/dmitriy-z.png" alt=""><div class="nm" style="color:#2fd08a">Дмитрий З</div><div class="meta">НАП · 7+2</div></a><a class="card" href="../players/mihail-d.html"><img class="" src="../assets/av/mihail-d.png" alt=""><div class="nm" style="color:#2fd08a">Михаил Д</div><div class="meta">НАП · 5+4</div></a><a class="card" href="../players/maksim-sk.html"><img class="" src="../assets/av/maksim-sk.png" alt=""><div class="nm" style="color:#ff6fb3">Максим Ск</div><div class="meta">ПЗ · 5+1</div></a><a class="card" href="../players/evgeniy-s.html"><img class="" src="../assets/av/evgeniy-s.png" alt=""><div class="nm" style="color:#5b9bff">Евгений С</div><div class="meta">ПЗ · 4+1</div></a></div><p class="note">состав выбран по протоколу вечера</p></div><div class="cols"><div><div class="panel"><h2>голы и передачи</h2><a class="row" href="../players/dmitriy-z.html"><img class="av" src="../assets/av/dmitriy-z.png" alt=""><span class="nm">Дмитрий З</span><span class="bar"><i style="width:77.8%;background:#2fd08a"></i><i class="a" style="width:22.2%;background:#2fd08a"></i></span><span class="n">7</span><span class="n d">2</span></a><a class="row" href="../players/mihail-d.html"><img class="av" src="../assets/av/mihail-d.png" alt=""><span class="nm">Михаил Д</span><span class="bar"><i style="width:55.6%;background:#2fd08a"></i><i class="a" style="width:44.4%;background:#2fd08a"></i></span><span class="n">5</span><span class="n d">4</span></a><a class="row" href="../players/maksim-sk.html"><img class="av" src="../assets/av/maksim-sk.png" alt=""><span class="nm">Максим Ск</span><span class="bar"><i style="width:55.6%;background:#ff6fb3"></i><i class="a" style="width:11.1%;background:#ff6fb3"></i></span><span class="n">5</span><span class="n d">1</span></a><a class="row" href="../players/igor-d.html"><img class="av" src="../assets/av/igor-d.png" alt=""><span class="nm">Игорь Д</span><span class="bar"><i style="width:33.3%;background:#2fd08a"></i><i class="a" style="width:33.3%;background:#2fd08a"></i></span><span class="n">3</span><span class="n d">3</span></a><a class="row" href="../players/evgeniy-s.html"><img class="av" src="../assets/av/evgeniy-s.png" alt=""><span class="nm">Евгений С</span><span class="bar"><i style="width:44.4%;background:#5b9bff"></i><i class="a" style="width:11.1%;background:#5b9bff"></i></span><span class="n">4</span><span class="n d">1</span></a><a class="row" href="../players/nikita-l.html"><img class="av" src="../assets/av/nikita-l.png" alt=""><span class="nm">Никита Л</span><span class="bar"><i style="width:22.2%;background:#5b9bff"></i><i class="a" style="width:33.3%;background:#5b9bff"></i></span><span class="n">2</span><span class="n d">3</span></a><a class="row" href="../players/vitaliy-g.html"><img class="av" src="../assets/av/vitaliy-g.png" alt=""><span class="nm">Виталий Г</span><span class="bar"><i style="width:11.1%;background:#2fd08a"></i><i class="a" style="width:44.4%;background:#2fd08a"></i></span><span class="n">1</span><span class="n d">4</span></a><a class="row" href="../players/vadim-sh.html"><img class="av" src="../assets/av/vadim-sh.png" alt=""><span class="nm">Вадим Ш</span><span class="bar"><i style="width:33.3%;background:#ff6fb3"></i><i class="a" style="width:11.1%;background:#ff6fb3"></i></span><span class="n">3</span><span class="n d">1</span></a><a class="row" href="../players/dmitriy-d.html"><img class="av" src="../assets/av/dmitriy-d.png" alt=""><span class="nm">Дмитрий Д</span><span class="bar"><i style="width:11.1%;background:#5b9bff"></i><i class="a" style="width:11.1%;background:#5b9bff"></i></span><span class="n">1</span><span class="n d">1</span></a><a class="row" href="../players/aleksandr-p.html"><img class="av" src="../assets/av/aleksandr-p.png" alt=""><span class="nm">Александр П</span><span class="bar"><i style="width:11.1%;background:#ff6fb3"></i><i class="a" style="width:0.0%;background:#ff6fb3"></i></span><span class="n">1</span><span class="n d">·</span></a><a class="row" href="../players/vyacheslav-z.html"><img class="av" src="../assets/av/vyacheslav-z.png" alt=""><span class="nm">Вячеслав З</span><span class="bar"><i style="width:0.0%;background:#ff6fb3"></i><i class="a" style="width:11.1%;background:#ff6fb3"></i></span><span class="n">·</span><span class="n d">1</span></a><a class="row" href="../players/konstantin-k.html"><img class="av" src="../assets/av/konstantin-k.png" alt=""><span class="nm">Константин К</span><span class="bar"><i style="width:0.0%;background:#ff6fb3"></i><i class="a" style="width:11.1%;background:#ff6fb3"></i></span><span class="n">·</span><span class="n d">1</span></a></div></div><div><div class="panel"><h2>цифры вечера</h2><div class="facts"><div class="fact"><span>ничьих</span><b>2 из 16</b></div><div class="fact"><span>нулевых</span><b>1</b></div><div class="fact"><span>голов за игру</span><b>2.00</b></div><div class="fact"><span>голов с передачи</span><b>69%</b></div></div></div><div class="panel"><h2>личные встречи</h2><div class="mv"><span style="color:#2fd08a">Зелёная</span><b>4 : 1 : 1</b><span style="color:#ff6fb3">Розовая</span></div><div class="mv"><span style="color:#2fd08a">Зелёная</span><b>6 : 1 : 0</b><span style="color:#5b9bff">Синяя</span></div><div class="mv"><span style="color:#ff6fb3">Розовая</span><b>2 : 0 : 1</b><span style="color:#5b9bff">Синяя</span></div><p class="note">победы · ничьи · победы</p></div></div></div><div class="panel"><h2>рубежи вечера</h2><div class="mv"><span><a href="../players/vadim-sh.html">Вадим Ш</a></span><span style="color:var(--dim)">первый гол, первая голевая</span></div><div class="mv"><span><a href="../players/vitaliy-g.html">Виталий Г</a></span><span style="color:var(--dim)">10-я голевая</span></div><div class="mv"><span><a href="../players/dmitriy-z.html">Дмитрий З</a></span><span style="color:var(--dim)">10-й гол</span></div><div class="mv"><span><a href="../players/maksim-sk.html">Максим Ск</a></span><span style="color:var(--dim)">10-й гол, первая голевая</span></div><div class="mv"><span><a href="../players/nikita-l.html">Никита Л</a></span><span style="color:var(--dim)">10-я голевая</span></div></div><div class="panel"><h2>хроника</h2><div class="log"><div class="lg"><span class="i">1</span><span class="t w" style="color:#ff6fb3">Розовая</span><span class="s">2 : 0</span><span class="t r" style="color:#5b9bff">Синяя</span></div><div class="lg"><span class="i">2</span><span class="t" style="color:#ff6fb3">Розовая</span><span class="s">0 : 0</span><span class="t r" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">3</span><span class="t" style="color:#5b9bff">Синяя</span><span class="s">1 : 1</span><span class="t r" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">4</span><span class="t w" style="color:#5b9bff">Синяя</span><span class="s">1 : 0</span><span class="t r" style="color:#ff6fb3">Розовая</span></div><div class="lg"><span class="i">5</span><span class="t" style="color:#5b9bff">Синяя</span><span class="s">0 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">6</span><span class="t" style="color:#ff6fb3">Розовая</span><span class="s">0 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">7</span><span class="t" style="color:#5b9bff">Синяя</span><span class="s">1 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">8</span><span class="t w" style="color:#ff6fb3">Розовая</span><span class="s">2 : 0</span><span class="t r" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">9</span><span class="t w" style="color:#ff6fb3">Розовая</span><span class="s">2 : 0</span><span class="t r" style="color:#5b9bff">Синяя</span></div><div class="lg"><span class="i">10</span><span class="t" style="color:#ff6fb3">Розовая</span><span class="s">0 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">11</span><span class="t" style="color:#5b9bff">Синяя</span><span class="s">0 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">12</span><span class="t" style="color:#ff6fb3">Розовая</span><span class="s">0 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">13</span><span class="t" style="color:#5b9bff">Синяя</span><span class="s">0 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">14</span><span class="t" style="color:#ff6fb3">Розовая</span><span class="s">0 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">15</span><span class="t" style="color:#5b9bff">Синяя</span><span class="s">1 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div><div class="lg"><span class="i">16</span><span class="t" style="color:#5b9bff">Синяя</span><span class="s">1 : 2</span><span class="t r w" style="color:#2fd08a">Зелёная</span></div></div></div><div class="panel" style="display:flex;justify-content:space-between"><a href="2026-09-11.html">← 11 сентября</a><a href="2026-09-25.html">25 сентября →</a></div><footer><span>до 2 голов или 7 минут</span><span>играем по пятницам</span></footer></div></body></html>
