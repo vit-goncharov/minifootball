@@ -186,6 +186,13 @@ footer { color:var(--faint); font-size:11px; letter-spacing:.14em; text-transfor
   .brow .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .brow .n { width:28px; }
   .leaf { grid-template-columns:72px 1fr; gap:14px; }
+  .awgrid .badge { padding:10px 12px; gap:10px; }
+  .awgrid .badge b { font-size:14px; }
+  .awgrid .badge span { font-size:10px; letter-spacing:.08em; }
+  .awgrid .badge i { font-size:14px; }
+  .badges .badge { padding:8px 11px; gap:7px; }
+  .badges .badge b { font-size:15px; }
+  .badges .badge span { font-size:10px; letter-spacing:.07em; }
   .fact b { font-size:19px; }
   table { font-size:13px; }
   .hide-sm { display:none; }
@@ -252,8 +259,12 @@ footer { color:var(--faint); font-size:11px; letter-spacing:.14em; text-transfor
 .mon > summary:hover { color:#fff; }
 .awgrid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 @media (max-width:620px) { .awgrid { grid-template-columns:1fr; } }
-.awgrid .badge { align-items:center; }
+.awgrid .badge { align-items:center; gap:12px; }
+.awgrid .badge > div { min-width:0; }
+.awgrid .badge b { overflow-wrap:anywhere; display:block; line-height:1.25; }
 .awgrid .badge span { font-size:11px; }
+.awgrid .badge i { white-space:nowrap; flex:none; }
+.badges .badge span { overflow-wrap:anywhere; }
 .badge { display:flex; align-items:center; gap:9px; border:1px solid var(--line);
   border-radius:10px; padding:9px 13px; background:rgba(140,172,235,.05); }
 .badge b { font-size:17px; font-weight:800; }
