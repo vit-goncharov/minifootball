@@ -240,6 +240,16 @@ footer { color:var(--faint); font-size:11px; letter-spacing:.14em; text-transfor
 .vid iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
 .vid + .cap { color:var(--dim); font-size:13px; margin-top:8px; }
 .badges { display:flex; flex-wrap:wrap; gap:10px; }
+.mon { margin-top:26px; }
+.mon > summary { list-style:none; cursor:pointer; display:flex; align-items:center;
+  gap:12px; font-size:19px; font-weight:800; letter-spacing:.08em;
+  text-transform:uppercase; padding:12px 0; border-bottom:1px solid var(--line);
+  margin-bottom:16px; }
+.mon > summary::-webkit-details-marker { display:none; }
+.mon > summary::after { content:"+"; margin-left:auto; font-size:22px; color:var(--faint);
+  font-weight:400; }
+.mon[open] > summary::after { content:"2"; }
+.mon > summary:hover { color:#fff; }
 .awgrid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 @media (max-width:620px) { .awgrid { grid-template-columns:1fr; } }
 .awgrid .badge { align-items:center; }
