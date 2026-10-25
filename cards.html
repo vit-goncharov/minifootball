@@ -49,6 +49,9 @@ tr:first-child td { border-top:0; }
   border-top:1px solid var(--line); }
 .row:first-of-type { border-top:0; }
 .row .nm { flex:1; min-width:0; overflow-wrap:anywhere; }
+.brow .nm { white-space:nowrap; overflow:visible; flex:0 0 auto;
+  overflow-wrap:normal; margin-right:4px; }
+.brow .bar { flex:1 1 40px; min-width:30px; }
 .row .n { width:34px; text-align:right; font-variant-numeric:tabular-nums; }
 .row .n.d { color:var(--faint); }
 .bar { flex:2; height:8px; border-radius:5px; background:rgba(140,172,235,.10);
@@ -183,7 +186,8 @@ footer { color:var(--faint); font-size:11px; letter-spacing:.14em; text-transfor
   .row .sub2 { flex:1 0 100%; padding-left:46px; white-space:normal; font-size:12px; }
   .brow { flex-wrap:nowrap; gap:9px; }
   .brow .bar { display:none; }
-  .brow .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .brow .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+    flex:1 1 auto; }
   .brow .n { width:28px; }
   .leaf { grid-template-columns:72px 1fr; gap:14px; }
   .awgrid .badge { padding:10px 12px; gap:10px; }
