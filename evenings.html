@@ -123,15 +123,13 @@ tr:first-child td { border-top:0; }
 .who { display:inline-flex; align-items:center; gap:10px; white-space:nowrap; }
 .who .av { width:26px; height:26px; }
 tr.few td { color:var(--faint); }
-.phases { display:grid; grid-auto-flow:column; grid-auto-columns:1fr; }
-.phases > div + div { border-left:1px solid var(--line); padding-left:26px; margin-left:26px; }
-@media (max-width:620px) {
-  .phases { grid-auto-flow:row; }
-  .phases > div + div { border-left:0; border-top:1px solid var(--line); padding:18px 0 0;
-    margin:18px 0 0; }
-}
-.phn { font-size:19px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
-.phd { color:var(--dim); font-size:13px; margin:4px 0 16px; }
+.more { display:none; }
+.more:not(:checked) ~ .scroll tr.x { display:none; }
+.morebtn { display:inline-block; margin-top:12px; font-size:11px; font-weight:800;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--dim); cursor:pointer; }
+.morebtn::before { content:attr(data-more); }
+.more:checked ~ .morebtn::before { content:"свернуть"; }
+.morebtn:hover { color:#fff; }
 tr.sw td { text-align:left; padding:16px 0 10px; border-top:2px solid var(--gold); color:var(--gold);
   font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
 tr.tm td { text-align:left; font-size:11px; font-weight:800; letter-spacing:.14em;
